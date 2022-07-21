@@ -1,12 +1,15 @@
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import App from './components/app/App';
+import Header from './components/header/Header';
+
 import './index.css';
-import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <StrictMode>
+  <div className='container'>
+    <Header/>
     <App />
-  </StrictMode>
+  </div>
 );
 
