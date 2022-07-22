@@ -1,1 +1,9 @@
+.content {
+    font-size: 20px;
+    padding: 0 30px;
+}
 
+.content__btn {
+    font-size: 20px;
+    padding: 5px 10px;
+}
