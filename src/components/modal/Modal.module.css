@@ -1,0 +1,47 @@
+.wrapper{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.content{
+    max-width: 720px;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgb(57, 62, 65);
+    
+}
+
+.text, .sub_text{
+    overflow-wrap: break-word;text-transform: unset;
+    text-align: center;
+    color: rgb(102, 255, 255);
+    font-size: 38px;
+}
+
+.sub_text{
+    font-size: 17px;
+    opacity: 0.5;
+}
+
+.active{
+    display: flex;
+    animation: visible 0.2s ease-in;
+}
+
+@keyframes visible {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

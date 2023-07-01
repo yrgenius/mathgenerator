@@ -1,15 +1,13 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './components/app/App';
-import Header from './components/header/Header';
-
-import './index.css';
+import App from './components/App';
+import './styles/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <div className='container'>
-    <Header/>
-    <App />
-  </div>
+    <div className='container'>
+        <App />
+    </div>
 );
 
