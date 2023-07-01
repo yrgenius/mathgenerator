@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import styles from './Main.module.css';
+import Constructor from '../constructor/Constructor';
+import Tasks from '../tasks/Tasks';
+// import styles from './Main.module.css';
 
 class Main extends Component {
     constructor(props) {
@@ -32,10 +34,18 @@ class Main extends Component {
         });
     }
 
+    generateTasks() {
+        console.log('generate task');
+    }
+
     render() {
 
         return (
             <div className="content" >
+                <Constructor
+                    generateTasks={this.generateTasks}
+                />
+                <Tasks />
                 <p>{this.state.firstNum} + {this.state.secondNum} = </p>
                 <button className='content__btn' onClick={this.generate}>Generate</button>
             </div>
@@ -45,3 +55,4 @@ class Main extends Component {
 }
 
 export default Main;
+
