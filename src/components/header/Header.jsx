@@ -1,19 +1,15 @@
-import { Component } from 'react';
-import './Header.css';
+import React from 'react';
+import image from '../../images/header.jpg';
+import styles from './Header.module.css';
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        
-    }
-    
-    render(){
-        return(
-            <div className="header">
-                <h1 className="header__title">MathGenerator</h1>
-            </div>
-        );
-    }
+const Header = () => {
+
+    return (
+        <div className={styles.header}>
+            <img className={styles.image} src={image} alt='logo Math Generator' ></img>
+        </div>
+    );
+
 }
 
 export default Header;
