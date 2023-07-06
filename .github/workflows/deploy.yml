@@ -49,10 +49,10 @@ jobs:
       - name: Deploy Server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{secrets.HOST}}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
-          port: ${{ secrets.PORT }}
+          host: ${{variables.HOST}}
+          username: ${{ variables.USERNAME }}
+          key: ${{ variables.SSHKEY }}
+          port: ${{ variables.PORT }}
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
