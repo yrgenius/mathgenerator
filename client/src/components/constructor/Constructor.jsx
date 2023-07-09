@@ -3,7 +3,7 @@ import RangeInput from '../UI/input/RangeInput';
 import styles from './Constructor.module.css';
 import Button from '../UI/button/Button';
 
-const Constructor = ({ generateTasks }) => {
+const Constructor = ({ getTotalCountTasks }) => {
     const [maxTotal, setMaxTotal] = useState(1);
 
     return (
@@ -13,7 +13,7 @@ const Constructor = ({ generateTasks }) => {
                 setMaxTotal={setMaxTotal} />
             <Button
                 text='Generate'
-                onClick={generateTasks} />
+                onClick={() => getTotalCountTasks(maxTotal)} />
         </div>
     );
 };
