@@ -1,28 +1,22 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useEffect, useState } from 'react'
 import Constructor from '../constructor/Constructor'
 import Tasks from '../tasks/Tasks'
 // import styles from './Main.module.css';
 
 const Main = () => {
-    const [countTasks, setCountTasks] = useState(0)
+    const [countTasks, setCountTasks] = useState(1)
 
-    const getTotalCountTasks = (totalCountTasks) => {
-        setCountTasks(totalCountTasks)
-    }
-    const examination = () => {
-        console.log('examination')
-    }
 
     return (
         <div className="content" >
             <Constructor
-                getTotalCountTasks={getTotalCountTasks}
+                getTotalCountTasks={setCountTasks}
             />
             <Tasks
                 totalCount={countTasks} />
             <button
                 className='content__btn'
-                onClick={examination}>Проверить</button>
+                onClick={() => { }}>Проверить</button>
         </div>
     )
 }

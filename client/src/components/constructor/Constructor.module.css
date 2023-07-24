@@ -1,9 +1,36 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 10px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(102, 102, 102) 0px 0px 5px;
     border-radius: 5px;
+}
+
+.wrapper__operators {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+input,
+label {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.label {
+    height: 22px;
+    line-height: 22px;
+}
+
+.operator {
+    width: 22px;
+    height: 22px;
 }
