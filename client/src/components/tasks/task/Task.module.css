@@ -1,0 +1,40 @@
+.wrapper {
+    display: inline;
+    padding: 5px 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 16px;
+    text-align: center;
+}
+
+p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+p span {
+    font-size: 26px;
+}
+
+.input {
+    justify-self: start;
+    padding: 4px 8px;
+    font-size: 22px;
+    width: 74px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}

@@ -1,17 +1,22 @@
-import React, {useState} from 'react';
-import styles from './Tasks.module.css';
+import React, { useEffect, useState } from 'react'
+import Task from './task/Task'
+import styles from './Tasks.module.css'
 
 const Tasks = ({ totalCount }) => {
-    const [totalCountTasks, setTotalCountTasks] = useState(0);
-    const tasks = Array(totalCount);
+    const [tasksArray, setTasksArray] = useState([])
+
+    useEffect(() => {
+        let arr = Array(+totalCount).fill(0)
+        setTasksArray(arr)
+    }, [totalCount])
 
     return (
         <div className={styles.wrapper}>
-            {tasks.map(() => (
-                <h1>task</h1>
+            {tasksArray.map((el, i) => (
+                <Task task={el} index={i} />
             ))}
         </div >
-    );
-};
+    )
+}
 
-export default Tasks;
+export default Tasks
