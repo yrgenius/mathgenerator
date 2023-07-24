@@ -3,14 +3,8 @@ import RangeInput from '../UI/input/RangeInput'
 import styles from './Constructor.module.css'
 import Button from '../UI/button/Button'
 
-const Constructor = ({ getTotalCountTasks }) => {
+const Constructor = ({ getTotalCountTasks, operators, setOperators }) => {
     const [maxTotal, setMaxTotal] = useState(1)
-    const [operators, setOperators] = useState({
-        plus: false,
-        minus: false,
-        mult: false,
-        division: false,
-    })
 
     return (
         <div className={styles.wrapper}>

@@ -9,6 +9,10 @@
     border-radius: 5px;
 }
 
+.wrapper__range {
+    width: 40%;
+}
+
 .wrapper__operators {
     display: flex;
     flex-wrap: wrap;
